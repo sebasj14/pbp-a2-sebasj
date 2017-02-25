@@ -2,6 +2,6 @@
 <div [style.color]="sebasColor">
     Hello {{name}}
 </div>
-<input type="text" [value]="name" (blur)="name = $event.target.value">
+<input type="text" [value]="name" (keyup.enter)="name = $event.target.value">
 <input type="text" [(ngModel)]="name">
 <button (click)="changeColor()">Change color</button>
