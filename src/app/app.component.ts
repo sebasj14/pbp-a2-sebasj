@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: 'my-app',
-  templateUrl: 'app/app.component.html'
+  templateUrl: 'app.component.html'
 })
-export class AppComponent  { 
+export class AppComponent {
   title = 'Customer App';
   name = 'SebasJ';
-  sebasColor = 'blue';
+  sebasColor = 'green';
 
   changeColor() {
-    this.sebasColor = this.sebasColor === 'red' ? 'blue' : 'red';
+    this.sebasColor = this.sebasColor === 'red' ? 'green' : 'red';
   }
 }
