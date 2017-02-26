@@ -1,2 +1,2 @@
 # Angular 2 - Play by Play - SebasJ
-This repository contains my result project after following the PluralSight course https://app.pluralsight.com/library/courses/play-by-play-angular-2-quick-start-john-papa-ward-bell
+This repository contains my result project after following the PluralSight course https://app.pluralsight.com/library/courses/play-by-play-angular-2-quick-start-john-papa-ward-bell as of February 25th, 2017
