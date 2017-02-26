@@ -9,15 +9,28 @@ import { CustomerService } from './customer.service';
     templateUrl: 'customers.component.html'
 })
 export class CustomersComponent implements OnInit {
-    customers: Observable<any[]>;
+    customers: any[];
 
     constructor(private _customerService: CustomerService) { }
 
     ngOnInit() {
-        this.customers = this._customerService.getCustomers()
+        this._customerService.getCustomers()
+            .then((customers) => this.customers = customers)
             .catch((err) => {
                 console.log(err);
-                return Observable.of([true]);
             });
+
+        // Promise <any[]>
+        // this.customers = this._customerService.getCustomers()
+        //     .catch((err) => {
+        //         console.log(err);
+        //     });
+
+        //Rx Observable version    
+        // this.customers = this._customerService.getCustomers()
+        //     .catch((err) => {
+        //         console.log(err);
+        //         return Observable.of([true]);
+        //     });
     }
 }
